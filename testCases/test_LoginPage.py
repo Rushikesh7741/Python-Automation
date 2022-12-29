@@ -12,7 +12,7 @@ class Test_001_Login:
      self.driver.get(self.baseURL)
      act_title=self.driver.title
 
-     if act_title== "Your store. Login123" :
+     if act_title== "Your store. Login" :
          assert True
          self.driver.close()
      else:
@@ -30,7 +30,7 @@ class Test_001_Login:
      self.lp.clickLoginButton()
      act_title=self.driver.title
 
-     if act_title=="Dashboard / nopCommerce administration123":
+     if act_title=="Dashboard / nopCommerce administration":
          assert  True
          self.driver.close()
      else:
