@@ -2,14 +2,16 @@ import pytest
 from selenium import webdriver
 
 from  PageObjects.LoginPage import LoginPage
+from Utilities.readproperties import readconfig
 from testCases.Conftest import setup
 class Test_001_Login:
- baseURL="https://admin-demo.nopcommerce.com/"
- username="admin@yourstore.com"
- password="admin"
+ baseURL=readconfig.ApplicationURL()
+ username=readconfig.Getusername()
+ password=readconfig.GetPassword()
  def test(self, setup):
      self.driver =setup
-     self.driver.get(self.baseURL)
+     s
+     elf.driver.get(self.baseURL)
      act_title=self.driver.title
 
      if act_title== "Your store. Login" :
